@@ -520,15 +520,10 @@ form input[type="submit"]:hover {
             </div>
         </div>
 
-      <div class="form-container">
+ <div class="form-container">
     <div class="form-trigger">Click to Fill Admission Form</div>
-    <form action="https://formsubmit.co/subravbhande@gmail.com" method="POST">
+    <form id="admissionForm">
         <h2>Military Hostel Admission Form</h2>
-
-        <!-- Redirect after submission -->
-       <input type="hidden" name="_next" value="https://subravbhande.github.io/thank-you.html">
-
-        <input type="hidden" name="_captcha" value="false">
 
         <fieldset>
             <legend>Personal Details</legend>
@@ -574,7 +569,37 @@ form input[type="submit"]:hover {
 
         <input type="submit" value="Submit Application">
     </form>
+
+    <div id="thankYouMessage" style="display:none; margin-top: 20px; text-align: center; font-weight: bold; color: green;">
+        🎉 Thank you! Your form has been submitted successfully.
+    </div>
 </div>
+
+<script>
+    const form = document.getElementById('admissionForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/ajax/subravbhande@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            form.reset();
+            form.style.display = "none";
+            thankYouMessage.style.display = "block";
+        })
+        .catch(error => {
+            alert("There was an error submitting the form. Please try again later.");
+        });
+    });
+</script>
+
 
         
         </div>
