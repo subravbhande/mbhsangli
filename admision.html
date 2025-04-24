@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Boys Hostel Sangli</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.fee-table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fee-table th, .fee-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.fee-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.fee-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+       /* Hidden form initially */
+.form-container form {
+  display: none;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Show form when active */
+.form-container form.active {
+  display: block;
+}
+
+/* Style for the form trigger */
+.form-trigger {
+  text-align: center;
+  padding: 12px 18px;
+  margin: 30px auto;
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  border: 2px solid #f39c12;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Priority Info Styling */
+.priority-info {
+    background-color: #f1f1f1;
+    border-left: 5px solid #2c3e50;
+    padding: 20px;
+    margin: 30px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.fee-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fee-table caption {
+    caption-side: top;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    color: #2c3e50;
+    background-color: #f8f8f8;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.fee-table th,
+.fee-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.fee-table th {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.fee-table tr:hover {
+    background-color: #eef;
+}
+/* Form Container Styling */
+.form-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #2c3e50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Toggle Button */
+.form-trigger {
+    display: block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-trigger:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+/* Form Hidden by Default */
+form {
+    display: none;
+}
+
+/* Show Form When Active */
+form.active {
+    display: block;
+}
+
+/* Form Element Styling */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Fieldsets */
+form fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+/* Labels and Inputs */
+form label {
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Radio Buttons & Checkbox */
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    .form-trigger {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    form fieldset {
+        padding: 15px;
+    }
+}
+
+
+/* Note Styling */
+.important-note {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
+.form-trigger:hover {
+  background-color: #34495e;
+  transform: scale(1.05);
+}
+
+        /* General Styling for h1 */
+        .hostel-title {
+            text-align: center;
+            width: 100%;
+            color: rgb(231, 41, 158);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px; /* Default size for larger screens */
+        }
+
+        /* Responsive - Adjusting font size on smaller screens */
+        @media screen and (max-width: 1024px) { /* Tablets and small laptops */
+            .hostel-title {
+                font-size: 36px; /* Smaller font size */
+            }
+        }
+
+        @media screen and (max-width: 600px) { /* Mobile devices */
+            .hostel-title {
+                font-size: 28px; /* Even smaller font size for mobile */
+            }
+        }
+
+        /* Additional styles (Sidebar, Button, etc.) */
+        /* Add a
+        /* Toggle Button - Initial Hidden Sidebar Trigger */
+        #sidebarToggle {
+            font-size: 22px;
+            padding: 10px 16px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            z-index: 1001;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        #sidebarToggle:hover {
+            transform: scale(1.15);
+            background-color: #34495e;
+        }
+
+        /* Sidebar Style */
+        #sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: -230px; /* Hidden by default */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: left 0.3s ease;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        #sidebar a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Show Sidebar When Active */
+        .sidebar-open #sidebar {
+            left: 0;
+        }
+
+        .sidebar-open .main-content {
+            margin-left: 230px;
+        }
+
+        /* Main Content */
+        .main-content {
+            transition: margin-left 0.3s;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            .sidebar-open .main-content {
+                margin-left: 200px;
+            }
+
+            #sidebarToggle {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+
+            #sidebar a {
+                font-size: 15px;
+                padding: 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebarToggle">&#9776; </button>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Administration.html">Administration</a>
+        <a href="admision.html">Admission</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="width-100 top-header">
+            <div class="container">
+                <div class="width-100">
+                    <b class="news-list" style="float: left;">NEWS :</b>
+                    <marquee class="headquote">Military Boys Hostel new admission started soon!</marquee>
+                </div>
+            </div>
+        </div>
+
+        <div class="width-100 header-menu">
+            <div class="container">
+                <div class="logo" style="float: left;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <div class="logo" style="float: right;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <h1 class="hostel-title">
+                    MILITARY BOYS HOSTEL, SANGLI
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const body = document.body;
+
+        sidebarToggle.addEventListener('click', () => {
+            body.classList.toggle('sidebar-open');
+        });
+    </script>
+
+    <div class="container">
+        <h2 style="text-align: center;">HOSTEL ADMISSION PRIORITY</h2>
+        <div class="priority-info">
+            <p>Admission priority:<br><br>
+            1. All children of war widows and widows of ex-servicemen<br>
+            2. Children studying in Post Graduate (Vocational), Medical, Engineering courses<br>
+            3. B.A.E., D.A.E.<br>
+            4. Degree Course (as per Merit List)<br>
+            5. 12th, 11th, 10th in order (as per quality list)<br>
+            6. Second and third shifts of ex-servicemen<br>
+            7. Children of serving soldiers<br>
+            8. Civilian child if space available (with Director's permission)</p>
+        </div>
+
+        <div class="container">
+            <table class="fee-table">
+                <caption>Hostel Fee Structure 2024-25</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Particulars</th>
+                        <th colspan="2">Amount (₹)</th>
+                        <th rowspan="2">Remarks</th>
+                    </tr>
+                    <tr>
+                        <th>Residence</th>
+                        <th>Mess</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Security Deposit</td>
+                        <td>1,000</td>
+                        <td>-</td>
+                        <td>Refundable (One-time)</td>
+                    </tr>
+                    <tr>
+                        <td>Ward of Serving/Ex-Serviceman</td>
+                        <td>500</td>
+                        <td>2,500</td>
+                        <td>Includes lodging & food</td>
+                    </tr>
+                    <tr>
+                        <td>Ward of Widow of Ex-Serviceman</td>
+                        <td>800</td>
+                        <td>2,500</td>
+                        <td>Includes lodging & food</td>
+                    </tr>
+                    <tr>
+                        <td>Ward of War Widow</td>
+                        <td>1,000</td>
+                        <td>2,500</td>
+                        <td>Includes lodging & food</td>
+                    </tr>
+                    <tr>
+                        <td>Civilian Ward</td>
+                        <td>1,500</td>
+                        <td>2,500</td>
+                        <td>Includes lodging & food</td>
+                    </tr>
+                    <tr>
+                        <td>Pune & Nagpur Region Students</td>
+                        <td>1,000</td>
+                        <td>-</td>
+                        <td>Additional regional charge</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+            
+            <div class="important-note">
+                * Money once paid will not be refunded.
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-trigger">Click to Fill Admission Form</div>
+            <form action="https://formsubmit.co/subravbhande@gmail.com" method="POST" enctype="multipart/form-data">
+                <h2>Military Hostel Admission Form</h2>
+        
+                <!-- Redirect URL after submission (optional) -->
+                <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
+        
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label>Full Name: <input type="text" name="Full Name" required></label>
+                    <label>Date of Birth: <input type="date" name="Date of Birth" required></label>
+                    <label>Address: <textarea name="Address" rows="3" required></textarea></label>
+                    <label>Contact Number: <input type="tel" name="Contact Number" pattern="[0-9]{10}" required></label>
+                    <label>Email: <input type="email" name="Email" required></label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Parent/Guardian Details</legend>
+                    <label>Father's Name: <input type="text" name="Father's Name" required></label>
+                    <label>Mother's Name: <input type="text" name="Mother's Name" required></label>
+                    <label>Occupation: <input type="text" name="Occupation" required></label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Military Background</legend>
+                    <label><input type="radio" name="Military Category" value="Ex-Serviceman's Child" required> Ex-Serviceman's Child</label>
+                    <label><input type="radio" name="Military Category" value="Civilian"> Civilian</label>
+                    <label><input type="radio" name="Military Category" value="On Duty Personnel's Child"> On Duty Personnel's Child</label>
+                    <label><input type="radio" name="Military Category" value="War Widow's Child"> War Widow's Child</label>
+                    <label><input type="radio" name="Military Category" value="Widow of Ex-Serviceman"> Widow of Ex-Serviceman</label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Academic Details</legend>
+                    <label>Last School Attended: <input type="text" name="Last School Attended" required></label>
+                    <label>Class/Grade: <input type="text" name="Class/Grade" required></label>
+                    <label>Percentage/CGPA: <input type="number" step="0.01" name="Percentage/CGPA" required></label>
+                    <label>Board/University: <input type="text" name="Board/University" required></label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Documents Upload</legend>
+                    <label>Birth Certificate: <input type="file" name="Birth Certificate" required></label>
+                    <label>Parent's Military ID: <input type="file" name="Parent's Military ID"></label>
+                    <label>Last Academic Marksheet: <input type="file" name="Last Academic Marksheet" required></label>
+                </fieldset>
+        
+                <fieldset>
+                    <label><input type="checkbox" name="Declaration" required> I declare all information is true</label>
+                </fieldset>
+        
+                <input type="submit" value="Submit Application">
+            </form>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.form-trigger').addEventListener('click', function() {
+            const form = document.querySelector('form');
+            form.classList.toggle('active');
+            this.textContent = form.classList.contains('active') 
+                ? 'Close Admission Form' 
+                : 'Click to Fill Admission Form';
+        });
+    </script>
+
+<footer>
+    <p>&copy; 2025 Military Boys Hostel. All Rights Reserved.</p>
+    <p>Contact: militaryhostel@example.com | Phone: +91 7083270345</p>
+    <div class="social-links">
+        <a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSN3XaSPqBtgz8Fn8MOgfVEicTQWeYF0IuiA&s"width="50px" height="50px" ></a> |
+        <a href="#" target="_blank"><img src="https://icon2.cleanpng.com/20240119/rp/transparent-x-logo-cross-design-black-and-white-photograph-sim-black-and-white-cross-with-letters-x-and-1710898892931.webp"width=50px height="50px"> </a> |
+        <a href="#" target="_blank"><img src="https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg?semt=ais_hybrid&w=740"width=50px height="50px"></a>
+    </div>
+</footer>
+</body>
+</html>

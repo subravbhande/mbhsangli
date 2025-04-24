@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Boys Hostel Sangli</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        /* General Styling for h1 */
+        .hostel-title {
+            text-align: center;
+            width: 100%;
+            color: rgb(231, 41, 158);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px; /* Default size for larger screens */
+        }
+
+        /* Responsive - Adjusting font size on smaller screens */
+        @media screen and (max-width: 1024px) { /* Tablets and small laptops */
+            .hostel-title {
+                font-size: 36px; /* Smaller font size */
+            }
+        }
+
+        @media screen and (max-width: 600px) { /* Mobile devices */
+            .hostel-title {
+                font-size: 28px; /* Even smaller font size for mobile */
+            }
+        }
+
+        /* Additional styles (Sidebar, Button, etc.) */
+        /* Add a
+        /* Toggle Button - Initial Hidden Sidebar Trigger */
+        #sidebarToggle {
+            font-size: 22px;
+            padding: 10px 16px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            z-index: 1001;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        #sidebarToggle:hover {
+            transform: scale(1.15);
+            background-color: #34495e;
+        }
+
+        /* Sidebar Style */
+        #sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: -230px; /* Hidden by default */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: left 0.3s ease;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        #sidebar a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Show Sidebar When Active */
+        .sidebar-open #sidebar {
+            left: 0;
+        }
+
+        .sidebar-open .main-content {
+            margin-left: 230px;
+        }
+
+        /* Main Content */
+        .main-content {
+            transition: margin-left 0.3s;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            .sidebar-open .main-content {
+                margin-left: 200px;
+            }
+
+            #sidebarToggle {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+
+            #sidebar a {
+                font-size: 15px;
+                padding: 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebarToggle">&#9776; </button>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Administration.html">Administration</a>
+        <a href="admision.html">Admission</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="width-100 top-header">
+            <div class="container">
+                <div class="width-100">
+                    <b class="news-list" style="float: left;">NEWS :</b>
+                    <marquee class="headquote">Military Boys Hostel new admission started soon!</marquee>
+                </div>
+            </div>
+        </div>
+
+        <div class="width-100 header-menu">
+            <div class="container">
+                <div class="logo" style="float: left;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <div class="logo" style="float: right;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <h1 class="hostel-title">
+                    MILITARY BOYS HOSTEL, SANGLI
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const body = document.body;
+
+        sidebarToggle.addEventListener('click', () => {
+            body.classList.toggle('sidebar-open');
+        });
+    </script>
+    
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #eef2f3;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .about-us {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 30px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+    
+            .heading-sect {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+    
+            .head-title {
+                font-size: 32px;
+                color: #e3ac2d;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin: 20px 0;
+            }
+    
+            .gov-sec-style {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin: 40px 0;
+                padding: 30px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease-in-out;
+            }
+    
+            .gov-sec-style:hover {
+                transform: scale(1.05);
+            }
+    
+            .width-40 {
+                width: 300px;
+                flex-shrink: 0;
+            }
+    
+            .width-60 {
+                flex-grow: 1;
+                max-width: 600px;
+            }
+    
+            .governor-img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 8px;
+                border: 3px solid #e74c3c;
+            }
+    
+            .governor-name {
+                font-size: 24px;
+                color: #2c3e50;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+    
+            .governor-designation, .governor-work {
+                font-size: 20px;
+                color: #e74c3c;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+    
+            @media (max-width: 768px) {
+                .gov-sec-style {
+                    flex-direction: column;
+                    text-align: center;
+                }
+    
+                .width-40 {
+                    width: 100%;
+                    max-width: 400px;
+                }
+    
+                .governor-img {
+                    height: 250px;
+                }
+    
+                .head-title {
+                    font-size: 28px;
+                }
+    
+                .governor-name {
+                    font-size: 22px;
+                }
+    
+                .governor-designation, .governor-work {
+                    font-size: 18px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="about-us">
+            <div class="heading-sect">
+                <h3 class="head-title">ADMINISTRATION (MANAGEMENT COMMITTEE)</h3>
+            </div>
+            <div id="governor-list"></div>
+        </div>
+    
+        <script>
+            const governors = [
+                {
+                    name: "C. P. Radhakrishnan",
+                    designation: "Governor of Maharashtra",
+                    work: "President: Executive Committee Soldier Welfare Department",
+                    phone: "Phone: 0233-2673073",
+                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/C._P._Radhakrishnan_%28cropped%29.png/330px-C._P._Radhakrishnan_%28cropped%29.png"
+                },
+                {
+                    name: "Col Deepak Manohar Thonge (Retd).",
+                    designation: "Director:-",
+                    work: "Soldier Welfare Department Pune",
+                    phone: "Phone: 020-26122287 ",
+                    img: "https://mahasainik.maharashtra.gov.in//upload/image/20240910044705slider_image.png"
+                },
+                {
+                    name: "Shri. Ashok Kakade",
+                    designation: "Collector and Chairman:-",
+                    work: "District Soldier Welfare Office",
+                    phone: "Phone: 0233-2602001",
+                    img: "https://ambraiclubsangli.com/wp-content/uploads/2025/02/sangli-colltor.jpg"
+                },
+                {
+                    name: "Lt Col Bhimsen Keshav Chawdar(Retd)",
+                    designation: "District Soldier Welfare Officer Sangli",
+                    work: "Governor of Maharashtra",
+                    phone: "Phone: 0233-2673073",
+                    img: "images/bhimsen.jpg"
+                },
+                {
+                    name: "SUDHEDAR Jadhav G.T. (Retd) ",
+                    designation: "Superintendent",
+                    work: "Military boys hostel",
+                    phone: "Phone: 0233-2673073",
+                    img:"jadhav sir.jpg"
+                }
+            ];
+    
+            const governorList = document.getElementById("governor-list");
+    
+            governors.forEach(governor => {
+                const governorCard = document.createElement("div");
+                governorCard.classList.add("gov-sec-style");
+                governorCard.innerHTML = `
+                    <div class="width-40">
+                        <img class="governor-img" src="${governor.img}" alt="Governor Portrait">
+                    </div>
+                    <div class="width-60">
+                        <p class="governor-name">${governor.name}</p>
+                        <p class="governor-designation">${governor.designation}</p>
+                        <p class="governor-work">${governor.work}</p>
+                        <p class="governor-designation">${governor.phone}</p>
+                    </div>
+                `;
+                governorList.appendChild(governorCard);
+            });
+        </script>
+ 
+    
+ <footer>
+    <p>&copy; 2025 Military Boys Hostel. All Rights Reserved.</p>
+    <p>Contact: militaryhostel@example.com | Phone: +91 7083270345</p>
+    <div class="social-links">
+        <a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSN3XaSPqBtgz8Fn8MOgfVEicTQWeYF0IuiA&s"width="50px" height="50px" ></a> |
+        <a href="#" target="_blank"><img src="https://icon2.cleanpng.com/20240119/rp/transparent-x-logo-cross-design-black-and-white-photograph-sim-black-and-white-cross-with-letters-x-and-1710898892931.webp"width=50px height="50px"> </a> |
+        <a href="#" target="_blank"><img src="https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg?semt=ais_hybrid&w=740"width=50px height="50px"></a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Boys Hostel Sangli</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        /* General Styling for h1 */
+        .hostel-title {
+            text-align: center;
+            width: 100%;
+            color: rgb(231, 41, 158);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px; /* Default size for larger screens */
+        }
+
+        /* Responsive - Adjusting font size on smaller screens */
+        @media screen and (max-width: 1024px) { /* Tablets and small laptops */
+            .hostel-title {
+                font-size: 36px; /* Smaller font size */
+            }
+        }
+
+        @media screen and (max-width: 600px) { /* Mobile devices */
+            .hostel-title {
+                font-size: 28px; /* Even smaller font size for mobile */
+            }
+        }
+
+        /* Additional styles (Sidebar, Button, etc.) */
+        /* Add a
+        /* Toggle Button - Initial Hidden Sidebar Trigger */
+        #sidebarToggle {
+            font-size: 22px;
+            padding: 10px 16px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            position: fixed;
+            top: 30px;
+            left: 10px;
+            z-index: 1001;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        #sidebarToggle:hover {
+            transform: scale(1.15);
+            background-color: #34495e;
+        }
+
+        /* Sidebar Style */
+        #sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            top: 0;
+            left: -230px; /* Hidden by default */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: left 0.3s ease;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        #sidebar a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar a:hover {
+            background-color: #575757;
+        }
+
+        /* Show Sidebar When Active */
+        .sidebar-open #sidebar {
+            left: 0;
+        }
+
+        .sidebar-open .main-content {
+            margin-left: 230px;
+        }
+
+        /* Main Content */
+        .main-content {
+            transition: margin-left 0.3s;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            .sidebar-open .main-content {
+                margin-left: 200px;
+            }
+
+            #sidebarToggle {
+                font-size: 18px;
+                padding: 8px 12px;
+            }
+
+            #sidebar a {
+                font-size: 15px;
+                padding: 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebarToggle">&#9776; </button>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="Administration.html">Administration</a>
+        <a href="admision.html">Admission</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="width-100 top-header">
+            <div class="container">
+                <div class="width-100">
+                    <b class="news-list" style="float: left;">NEWS :</b>
+                    <marquee class="headquote">Military Boys Hostel new admission started soon!</marquee>
+                </div>
+            </div>
+        </div>
+
+        <div class="width-100 header-menu">
+            <div class="container">
+                <div class="logo" style="float: left;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <div class="logo" style="float: right;">
+                    <img src="logo.png" alt="Military Boys Hostel Logo">
+                </div>
+                <h1 class="hostel-title">
+                    MILITARY BOYS HOSTEL, SANGLI
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const body = document.body;
+
+        sidebarToggle.addEventListener('click', () => {
+            body.classList.toggle('sidebar-open');
+        });
+    </script>
+  
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Facilities Section */
+        #facilities {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        #facilities h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        #facilities h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: #e74c3c;
+            border-radius: 2px;
+        }
+
+        /* Facilities Grid */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .facility-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facility-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .facility-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .facility-text {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #facilities {
+                padding: 1rem;
+            }
+
+            #facilities h2 {
+                font-size: 2.2rem;
+            }
+
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facility-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="facilities">
+        <h2>Our Facilities</h2>
+        <div class="facilities-grid">
+            <!-- Facilities List -->
+            <div class="facility-item">
+                <img class="facility-img" src="https://integralspor.com/uploads/facility/detail/squash-salonlari-img-1.jpg" alt="Squash Court">
+                <p class="facility-text">Sangli District No. 1 Squash Ball Court</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRakPx-km7KgEMBBKmJ_2vnYGFOUN-ag-ibew&s" alt="Security Premises">
+                <p class="facility-text">Secure Premises (24/7 CCTV, Security Guards)</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://thumbs.dreamstime.com/b/bed-military-barracks-row-bed-military-barracks-row-interior-140197669.jpg" alt="Dormitory">
+                <p class="facility-text">Comfortable Dormitories</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://royalcollege.in/images/hostel-mess.jpg" alt="Mess & Dining">
+                <p class="facility-text">Nutritious Mess & Dining</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://rhinosportsinfraprojects.com/assets/images/Outdoor%20Gym/1.jpg" alt="Gym">
+                <p class="facility-text">Sports & Fitness (Gym, Playground)</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://content3.jdmagicbox.com/comp/varanasi/q5/0542px542.x542.220105161526.b6q5/catalogue/aim-study-hall-and-library-kakarmatta-varanasi-libraries-iqily6cijx.jpg" alt="Library">
+                <p class="facility-text">Library & Study Hall</p>
+            </div>
+            <div class="facility-item">
+                <img class="facility-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTph1ET-BENV6mG0471kbUAoaj7WUOkEyd8Vw&s" alt="Medical Assistance">
+                <p class="facility-text">Medical Assistance</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Military Boys Hostel. All Rights Reserved.</p>
+        <p>Contact: militaryhostel@example.com | Phone: +91 7083270345</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSN3XaSPqBtgz8Fn8MOgfVEicTQWeYF0IuiA&s"width="50px" height="50px" ></a> |
+            <a href="#" target="_blank"><img src="https://icon2.cleanpng.com/20240119/rp/transparent-x-logo-cross-design-black-and-white-photograph-sim-black-and-white-cross-with-letters-x-and-1710898892931.webp"width=50px height="50px"> </a> |
+            <a href="#" target="_blank"><img src="https://img.freepik.com/premium-psd/facebook-social-media-icon-3d_466778-4384.jpg?semt=ais_hybrid&w=740"width=50px height="50px"></a>
+        </div>
+    </footer>
+    <script>// Add this to your script.js file
+        document.addEventListener('DOMContentLoaded', () => {
+            const facilityItems = document.querySelectorAll('.facility-item');
+        
+            facilityItems.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    item.style.transform = 'translateY(-8px)';
+                    item.style.boxShadow = '0 12px 30px rgba(0, 0, 0, 0.2)';
+                });
+                
+                item.addEventListener('mouseout', () => {
+                    item.style.transform = 'translateY(0)';
+                    item.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+        </script>
+</body>
+</html>
