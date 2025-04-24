@@ -522,6 +522,7 @@ form input[type="submit"]:hover {
 
  <div class="form-container">
     <div class="form-trigger">Click to Fill Admission Form</div>
+
     <form id="admissionForm">
         <h2>Military Hostel Admission Form</h2>
 
@@ -570,49 +571,47 @@ form input[type="submit"]:hover {
         <input type="submit" value="Submit Application">
     </form>
 
-    <div id="thankYouMessage" style="display:none; margin-top: 20px; text-align: center; font-weight: bold; color: green;">
-        🎉 Thank you! Your form has been submitted successfully.
+    <div id="thankYou" style="display:none; margin-top:20px; font-size:18px; font-weight:bold; color:green;">
+        ✅ Thank you! Your application has been submitted.
     </div>
 </div>
 
 <script>
-    const form = document.getElementById('admissionForm');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-
-        fetch("https://formsubmit.co/ajax/subravbhande@gmail.com", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            form.reset();
-            form.style.display = "none";
-            thankYouMessage.style.display = "block";
-        })
-        .catch(error => {
-            alert("There was an error submitting the form. Please try again later.");
-        });
-    });
-</script>
-
-
-        
-        </div>
-    </div>
-
-    <script>
-        document.querySelector('.form-trigger').addEventListener('click', function() {
+     document.querySelector('.form-trigger').addEventListener('click', function() {
             const form = document.querySelector('form');
             form.classList.toggle('active');
             this.textContent = form.classList.contains('active') 
                 ? 'Close Admission Form' 
                 : 'Click to Fill Admission Form';
         });
+    const form = document.getElementById('admissionForm');
+    const thankYou = document.getElementById('thankYou');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default redirect
+
+        const formData = new FormData(form);
+
+        fetch('https://formsubmit.co/ajax/subravbhande@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                form.reset();
+                form.style.display = "none";
+                thankYou.style.display = "block";
+            } else {
+                alert("Error submitting form. Please check your network or try again later.");
+            }
+        })
+        .catch(error => {
+            console.error("Form error:", error);
+            alert("There was a problem submitting your form.");
+        });
+    });
+
+       
     </script>
 
 <footer>
