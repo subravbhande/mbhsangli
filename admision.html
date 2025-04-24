@@ -520,62 +520,61 @@ form input[type="submit"]:hover {
             </div>
         </div>
 
-        <div class="form-container">
-            <div class="form-trigger">Click to Fill Admission Form</div>
-            <form action="https://formsubmit.co/subravbhande@gmail.com" method="POST" enctype="multipart/form-data">
-                <h2>Military Hostel Admission Form</h2>
-        
-                <!-- Redirect URL after submission (optional) -->
-                <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
-                <input type="hidden" name="_captcha" value="false">
-        
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    <label>Full Name: <input type="text" name="Full Name" required></label>
-                    <label>Date of Birth: <input type="date" name="Date of Birth" required></label>
-                    <label>Address: <textarea name="Address" rows="3" required></textarea></label>
-                    <label>Contact Number: <input type="tel" name="Contact Number" pattern="[0-9]{10}" required></label>
-                    <label>Email: <input type="email" name="Email" required></label>
-                </fieldset>
-        
-                <fieldset>
-                    <legend>Parent/Guardian Details</legend>
-                    <label>Father's Name: <input type="text" name="Father's Name" required></label>
-                    <label>Mother's Name: <input type="text" name="Mother's Name" required></label>
-                    <label>Occupation: <input type="text" name="Occupation" required></label>
-                </fieldset>
-        
-                <fieldset>
-                    <legend>Military Background</legend>
-                    <label><input type="radio" name="Military Category" value="Ex-Serviceman's Child" required> Ex-Serviceman's Child</label>
-                    <label><input type="radio" name="Military Category" value="Civilian"> Civilian</label>
-                    <label><input type="radio" name="Military Category" value="On Duty Personnel's Child"> On Duty Personnel's Child</label>
-                    <label><input type="radio" name="Military Category" value="War Widow's Child"> War Widow's Child</label>
-                    <label><input type="radio" name="Military Category" value="Widow of Ex-Serviceman"> Widow of Ex-Serviceman</label>
-                </fieldset>
-        
-                <fieldset>
-                    <legend>Academic Details</legend>
-                    <label>Last School Attended: <input type="text" name="Last School Attended" required></label>
-                    <label>Class/Grade: <input type="text" name="Class/Grade" required></label>
-                    <label>Percentage/CGPA: <input type="number" step="0.01" name="Percentage/CGPA" required></label>
-                    <label>Board/University: <input type="text" name="Board/University" required></label>
-                </fieldset>
-        
-                <fieldset>
-                    <legend>Documents Upload</legend>
-                    <label>Birth Certificate: <input type="file" name="Birth Certificate" required></label>
-                    <label>Parent's Military ID: <input type="file" name="Parent's Military ID"></label>
-                    <label>Last Academic Marksheet: <input type="file" name="Last Academic Marksheet" required></label>
-                </fieldset>
-        
-                <fieldset>
-                    <label><input type="checkbox" name="Declaration" required> I declare all information is true</label>
-                </fieldset>
-        
-                <input type="submit" value="Submit Application">
-            </form>
-        </div>
+      <div class="form-container">
+    <div class="form-trigger">Click to Fill Admission Form</div>
+    <form action="https://formsubmit.co/subravbhande@gmail.com" method="POST">
+        <h2>Military Hostel Admission Form</h2>
+
+        <!-- Redirect after submission -->
+        <input type="hidden" name="_next" value="https://your-website.com/thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label>Full Name: <input type="text" name="Full Name" required></label>
+            <label>Date of Birth: <input type="date" name="Date of Birth" required></label>
+            <label>Address: <textarea name="Address" rows="3" required></textarea></label>
+            <label>Contact Number: <input type="tel" name="Contact Number" pattern="[0-9]{10}" required></label>
+            <label>Email: <input type="email" name="Email" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parent/Guardian Details</legend>
+            <label>Father's Name: <input type="text" name="Father's Name" required></label>
+            <label>Mother's Name: <input type="text" name="Mother's Name" required></label>
+            <label>Occupation: <input type="text" name="Occupation" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Military Background</legend>
+            <label><input type="radio" name="Military Category" value="Ex-Serviceman's Child" required> Ex-Serviceman's Child</label>
+            <label><input type="radio" name="Military Category" value="Civilian"> Civilian</label>
+            <label><input type="radio" name="Military Category" value="On Duty Personnel's Child"> On Duty Personnel's Child</label>
+            <label><input type="radio" name="Military Category" value="War Widow's Child"> War Widow's Child</label>
+            <label><input type="radio" name="Military Category" value="Widow of Ex-Serviceman"> Widow of Ex-Serviceman</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Details</legend>
+            <label>Last School Attended: <input type="text" name="Last School Attended" required></label>
+            <label>Class/Grade: <input type="text" name="Class/Grade" required></label>
+            <label>Percentage/CGPA: <input type="number" step="0.01" name="Percentage/CGPA" required></label>
+            <label>Board/University: <input type="text" name="Board/University" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Document Upload Instructions</legend>
+            <p>Please email scanned copies of your Birth Certificate, Parent's Military ID (if any), and Marksheet to: <strong>subravbhande@gmail.com</strong></p>
+        </fieldset>
+
+        <fieldset>
+            <label><input type="checkbox" name="Declaration" required> I declare all information is true</label>
+        </fieldset>
+
+        <input type="submit" value="Submit Application">
+    </form>
+</div>
+
         
         </div>
     </div>
